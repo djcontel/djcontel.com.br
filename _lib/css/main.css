@@ -1,0 +1,348 @@
+html { height: 100%; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100%;
+    background: #fff url('../images/bg.jpg') center center no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: .85rem;
+    color: #404040;
+}
+
+::selection { background: #404040; color: #fff; }
+::-moz-selection { background: #404040; color: #fff; }
+::-webkit-selection { background: #404040; color: #fff; }
+
+strong { font-weight: 700; }
+
+a {
+    text-decoration: none;
+    color: #404040;
+}
+
+a:hover,
+a:focus { color: #16a851; }
+
+a:focus { outline: none; }
+
+h1,
+h2,
+p { margin: 0; }
+
+h1 {
+    margin: 10px 0;
+    text-indent: -9999px;
+}
+
+h1 a {
+    display: block;
+    margin: 0 auto;
+    width: 418px;
+    height: 68px;
+    background: url('../images/djcontel.png') no-repeat;
+    color: #fff;
+}
+
+form {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 10px;
+    width: 302px;
+    background-color: #fff;
+    font-size: 0;
+    box-shadow: 0 0 5px 2px #ddd;
+    -moz-box-shadow: 0 0 5px 2px #ddd;
+    -webkit-box-shadow: 0 0 5px 2px #ddd;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input,
+textarea,
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: .85rem;
+}
+
+textarea {
+    resize: none;
+    margin: 0;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    width: 280px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-weight: 300;
+    color: #404040;
+}
+
+input:focus,
+textarea:focus { outline: 1px solid #dddddd; }
+
+::-moz-placeholder { font-style: italic; text-transform: none; color: #bbb; }
+::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #bbb; }
+:-ms-input-placeholder { font-style: italic; text-transform: none; color: #bbb; }
+:-moz-placeholder { font-style: italic; text-transform: none; color: #bbb; }
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #394141;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ddd;
+    color: #bbb;
+    cursor: wait;
+}
+
+button:focus { outline: 2px solid #dddddd; }
+
+#recaptcha {
+    margin-bottom: 10px;
+    width: 302px;
+    height: 76px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background: url('../images/bg_recaptcha.jpg') center center no-repeat;
+}
+
+#enviar { width: 302px; }
+
+ul.stacks,
+ul.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.stacks { margin-top: 10px; }
+
+ul.links { margin-bottom: 10px; }
+
+ul.stacks li,
+ul.links li { margin-right: 10px; }
+
+ul.stacks li:last-child,
+ul.links li:last-child { margin-right: 0; }
+
+ul.stacks li i,
+ul.links li i { font-size: 2rem; }
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+main .container {
+    margin: 0 auto;
+    width: 322px;
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: .85rem;
+}
+
+.msg p.titulo {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.msg button { margin-top: 10px; }
+
+.msg.sucesso {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.msg.sucesso button {
+    background-color: #155724;
+    color: #d4edda;
+}
+
+.msg.alerta {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.msg.alerta button {
+    background-color: #856404;
+    color: #fff3cd;
+}
+
+.msg.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.msg.erro button {
+    background-color: #721c24;
+    color: #f8d7da;
+}
+
+@media (min-width: 501px) {
+    h1 { margin: 20px 0; }
+
+    form {
+        padding: 20px;
+        width: 440px;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 20px;
+        width: 418px;
+    }
+
+    #recaptcha {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    #enviar {
+        float: right;
+        width: 118px;
+        height: 76px;
+    }
+
+    h2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    ul.stacks { margin-top: 20px; }
+
+    ul.stacks li,
+    ul.links li { margin-right: 20px; }
+
+    h2 span { padding-left: 20px; }
+
+    ul.links { margin-bottom: 20px; }
+
+    main .container { width: 480px; }
+}
+
+@media (min-width: 0) and (max-width: 500px) {
+    h1 a {
+        width: 302px;
+        height: 48px;
+        background-size: 302px 48px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        background-image: url('../images/bg.dark.jpg');
+        color: #fff;
+    }
+
+    a { color: #fff; }
+
+    h1 a {
+        background-image: url('../images/djcontel.dark.png');
+        color: #222;
+    }
+
+    form {
+        background-color: #222;
+        box-shadow: 0 0 5px 2px #111;
+        -moz-box-shadow: 0 0 5px 2px #111;
+        -webkit-box-shadow: 0 0 5px 2px #111;
+    }
+
+    input,
+    textarea {
+        border-color: #525252;
+        background-color: #222;
+        color: #fff;
+    }
+
+    input:focus,
+    textarea:focus { outline: 1px solid #525252; }
+
+    button {
+        background-color: #fff;
+        color: #525252;
+    }
+
+    button:disabled {
+        background-color: #525252;
+        color: #fff;
+    }
+
+    button:focus { outline-color: #525252; }
+
+    #recaptcha { background-image: url('../images/bg_recaptcha.dark.jpg'); }
+
+    .msg.sucesso {
+        background-color: #155724;
+        color: #d4edda;
+    }
+
+    .msg.sucesso button {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .msg.alerta {
+        background-color: #856404;
+        color: #fff3cd;
+    }
+
+    .msg.alerta button {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .msg.erro {
+        background-color: #721c24;
+        color: #f8d7da;
+    }
+
+    .msg.erro button {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+}
+
+@media print {
+    * { display: none; }
+}

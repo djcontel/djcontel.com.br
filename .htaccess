@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)*djcontel.com.br
+RewriteRule ^ https://www.djcontel.com.br%{REQUEST_URI} [L,R=301]
+
+#RewriteRule ^erro?$ erro.html [L,NC]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([a-z0-9\-\_\/]+)$ index.php?$1 [L,NC]
