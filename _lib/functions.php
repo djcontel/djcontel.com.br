@@ -1,20 +1,18 @@
 <?php
-
 function fileVersion($file, $return = false)
 {
-    if (file_exists(DJC_PATH . $file))
-    {
+    if (file_exists(DJC_PATH . $file)) {
         $mtime = filemtime(DJC_PATH . $file);
         $file  = DJC_URL . $file . "?" . $mtime;
-    }
-    else
-    {
-        if ($return == true)
+    } else {
+        if ($return == true) {
             $file = "";
+        }
     }
 
-    if ($return == false)
+    if ($return == false) {
         echo $file;
-    else
+    } else {
         return $file;
+    }
 }
