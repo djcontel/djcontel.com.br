@@ -208,5 +208,12 @@
             };
         }
     </script>
+<?php
+    if (DJC_SANDBOX === false) {
+        // Clicky
+        echo "<script async src=\"//static.getclicky.com/101398008.js\"></script>\n";
+        echo "<noscript><p><img alt=\"Clicky\" width=\"1\" height=\"1\" src=\"//in.getclicky.com/101398008ns.gif\"></p></noscript>\n";
+    }
+?>
   </body>
 </html>
