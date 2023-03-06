@@ -6,25 +6,25 @@ body {
     justify-content: center;
     margin: 0;
     min-height: 100%;
-    background: #fff url('../images/bg.jpg') center center no-repeat;
+    background: #f9f9f9 url('../images/bg.jpg') center center no-repeat;
     font-family: 'Fira Sans', sans-serif;
     font-size: .85rem;
-    color: #404040;
+    color: #1a2e44;
 }
 
-::selection { background: #404040; color: #fff; }
-::-moz-selection { background: #404040; color: #fff; }
-::-webkit-selection { background: #404040; color: #fff; }
+::selection { background: #1a2e44; color: #f9f9f9; }
+::-moz-selection { background: #1a2e44; color: #f9f9f9; }
+::-webkit-selection { background: #1a2e44; color: #f9f9f9; }
 
 strong { font-weight: 700; }
 
 a {
     text-decoration: none;
-    color: #404040;
+    color: #1a2e44;
 }
 
 a:hover,
-a:focus { color: #16a851; }
+a:focus { color: #566583; }
 
 a:focus { outline: none; }
 
@@ -40,10 +40,10 @@ h1 {
 h1 a {
     display: block;
     margin: 0 auto;
-    width: 418px;
+    width: 448px;
     height: 68px;
     background: url('../images/djcontel.png') no-repeat;
-    color: #fff;
+    color: #f9f9f9;
 }
 
 form {
@@ -52,7 +52,7 @@ form {
     -webkit-border-radius: 2px;
     padding: 10px;
     width: 302px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     font-size: 0;
     box-shadow: 0 0 5px 2px #ddd;
     -moz-box-shadow: 0 0 5px 2px #ddd;
@@ -90,27 +90,27 @@ textarea {
     margin-bottom: 10px;
     width: 280px;
     border: 1px solid #ddd;
-    background-color: #fff;
+    background-color: #f9f9f9;
     font-weight: 300;
-    color: #404040;
+    color: #1a2e44;
 }
 
 input:focus,
 textarea:focus { outline: 1px solid #dddddd; }
 
-::-moz-placeholder { font-style: italic; text-transform: none; color: #bbb; }
-::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #bbb; }
-:-ms-input-placeholder { font-style: italic; text-transform: none; color: #bbb; }
-:-moz-placeholder { font-style: italic; text-transform: none; color: #bbb; }
+::-moz-placeholder { font-style: italic; text-transform: none; color: #566583; }
+::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #566583; }
+:-ms-input-placeholder { font-style: italic; text-transform: none; color: #566583; }
+:-moz-placeholder { font-style: italic; text-transform: none; color: #566583; }
 
 button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #394141;
+    background-color: #22d172;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: #f9f9f9;
     cursor: pointer;
 }
 
@@ -119,6 +119,9 @@ button:disabled {
     color: #bbb;
     cursor: wait;
 }
+
+button:hover,
+button:focus { background-color: #45e890; }
 
 button:focus { outline: 2px solid #dddddd; }
 
@@ -186,32 +189,32 @@ main .container {
 .msg button { margin-top: 10px; }
 
 .msg.sucesso {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #d1e7dd;
+    color: #146c43;
 }
 
 .msg.sucesso button {
-    background-color: #155724;
-    color: #d4edda;
+    background-color: #146c43;
+    color: #d1e7dd;
 }
 
 .msg.alerta {
     background-color: #fff3cd;
-    color: #856404;
+    color: #997404;
 }
 
 .msg.alerta button {
-    background-color: #856404;
+    background-color: #997404;
     color: #fff3cd;
 }
 
 .msg.erro {
     background-color: #f8d7da;
-    color: #721c24;
+    color: #b02a37;
 }
 
 .msg.erro button {
-    background-color: #721c24;
+    background-color: #b02a37;
     color: #f8d7da;
 }
 
@@ -269,77 +272,78 @@ main .container {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #222;
+        background-color: #1a2e44;
         background-image: url('../images/bg.dark.jpg');
-        color: #fff;
+        color: #f9f9f9;
     }
 
-    a { color: #fff; }
+    ::selection { background: #f9f9f9; color: #1a2e44; }
+    ::-moz-selection { background: #f9f9f9; color: #1a2e44; }
+    ::-webkit-selection { background: #f9f9f9; color: #1a2e44; }
+
+    a { color: #f9f9f9; }
 
     h1 a {
         background-image: url('../images/djcontel.dark.png');
-        color: #222;
+        color: #1a2e44;
     }
 
     form {
-        background-color: #222;
-        box-shadow: 0 0 5px 2px #111;
-        -moz-box-shadow: 0 0 5px 2px #111;
-        -webkit-box-shadow: 0 0 5px 2px #111;
+        background-color: #1a2e44;
+        box-shadow: 0 0 5px 2px #16283a;
+        -moz-box-shadow: 0 0 5px 2px #16283a;
+        -webkit-box-shadow: 0 0 5px 2px #16283a;
     }
 
     input,
     textarea {
-        border-color: #525252;
-        background-color: #222;
-        color: #fff;
+        border-color: #16283a;
+        background-color: #1a2e44;
+        color: #f9f9f9;
     }
 
     input:focus,
-    textarea:focus { outline: 1px solid #525252; }
+    textarea:focus { outline: 1px solid #566583; }
 
-    button {
-        background-color: #fff;
-        color: #525252;
-    }
+    button { color: #1a2e44; }
 
     button:disabled {
-        background-color: #525252;
-        color: #fff;
+        background-color: #566583;
+        color: #1a2e44;
     }
 
-    button:focus { outline-color: #525252; }
+    button:focus { outline-color: #566583; }
 
     #recaptcha { background-image: url('../images/bg_recaptcha.dark.jpg'); }
 
     .msg.sucesso {
-        background-color: #155724;
-        color: #d4edda;
+        background-color: #051b11;
+        color: #75b798;
     }
 
     .msg.sucesso button {
-        background-color: #d4edda;
-        color: #155724;
+        background-color: #75b798;
+        color: #051b11;
     }
 
     .msg.alerta {
-        background-color: #856404;
-        color: #fff3cd;
+        background-color: #332701;
+        color: #ffda6a;
     }
 
     .msg.alerta button {
-        background-color: #fff3cd;
-        color: #856404;
+        background-color: #ffda6a;
+        color: #332701;
     }
 
     .msg.erro {
-        background-color: #721c24;
-        color: #f8d7da;
+        background-color: #2c0b0e;
+        color: #ea868f;
     }
 
     .msg.erro button {
-        background-color: #f8d7da;
-        color: #721c24;
+        background-color: #ea868f;
+        color: #2c0b0e;
     }
 }
 

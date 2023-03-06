@@ -177,15 +177,8 @@
 
         if (form) {
             var onloadCallback = function() {
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    theme = "dark";
-                } else {
-                    theme = "light";
-                }
-
                 grecaptcha.render('recaptcha', {
-                    'sitekey' : '<?= reCAPTCHA_SITE_KEY ?>',
-                    'theme' : theme
+                    'sitekey' : '<?= reCAPTCHA_SITE_KEY ?>'
                 });
             };
 
