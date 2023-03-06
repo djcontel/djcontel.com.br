@@ -96,12 +96,12 @@ textarea {
 }
 
 input:focus,
-textarea:focus { outline: 1px solid #dddddd; }
+textarea:focus { outline: 1px solid #566583; }
 
-::-moz-placeholder { font-style: italic; text-transform: none; color: #566583; }
-::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #566583; }
-:-ms-input-placeholder { font-style: italic; text-transform: none; color: #566583; }
-:-moz-placeholder { font-style: italic; text-transform: none; color: #566583; }
+::-moz-placeholder { font-style: italic; text-transform: none; color: #1a2e44; }
+::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #1a2e44; }
+:-ms-input-placeholder { font-style: italic; text-transform: none; color: #1a2e44; }
+:-moz-placeholder { font-style: italic; text-transform: none; color: #1a2e44; }
 
 button {
     display: flex;
@@ -123,7 +123,7 @@ button:disabled {
 button:hover,
 button:focus { background-color: #45e890; }
 
-button:focus { outline: 2px solid #dddddd; }
+button:focus { outline: 2px solid #22d172; }
 
 #recaptcha {
     margin-bottom: 10px;
@@ -277,11 +277,14 @@ main .container {
         color: #f9f9f9;
     }
 
-    ::selection { background: #f9f9f9; color: #1a2e44; }
-    ::-moz-selection { background: #f9f9f9; color: #1a2e44; }
-    ::-webkit-selection { background: #f9f9f9; color: #1a2e44; }
+    ::selection { background: #45e890; color: #1a2e44; }
+    ::-moz-selection { background: #45e890; color: #1a2e44; }
+    ::-webkit-selection { background: #45e890; color: #1a2e44; }
 
     a { color: #f9f9f9; }
+
+    a:hover,
+    a:focus { color: #45e890; }
 
     h1 a {
         background-image: url('../images/djcontel.dark.png');
@@ -290,20 +293,25 @@ main .container {
 
     form {
         background-color: #1a2e44;
-        box-shadow: 0 0 5px 2px #16283a;
-        -moz-box-shadow: 0 0 5px 2px #16283a;
-        -webkit-box-shadow: 0 0 5px 2px #16283a;
+        box-shadow: 0 0 5px 2px #13283e;
+        -moz-box-shadow: 0 0 5px 2px #13283e;
+        -webkit-box-shadow: 0 0 5px 2px #13283e;
     }
 
     input,
     textarea {
-        border-color: #16283a;
+        border-color: #13283e;
         background-color: #1a2e44;
         color: #f9f9f9;
     }
 
     input:focus,
-    textarea:focus { outline: 1px solid #566583; }
+    textarea:focus { outline: 1px solid #45e890; }
+
+    ::-moz-placeholder { font-style: italic; text-transform: none; color: #f9f9f9; }
+    ::-webkit-input-placeholder { font-style: italic; text-transform: none; color: #f9f9f9; }
+    :-ms-input-placeholder { font-style: italic; text-transform: none; color: #f9f9f9; }
+    :-moz-placeholder { font-style: italic; text-transform: none; color: #f9f9f9; }
 
     button { color: #1a2e44; }
 
@@ -311,8 +319,6 @@ main .container {
         background-color: #566583;
         color: #1a2e44;
     }
-
-    button:focus { outline-color: #566583; }
 
     #recaptcha { background-image: url('../images/bg_recaptcha.dark.jpg'); }
 
