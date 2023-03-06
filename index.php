@@ -164,6 +164,8 @@
           <li><i class="devicon-css3-plain-wordmark" title="CSS3"></i></li>
           <li><i class="devicon-javascript-plain" title="JavaScript"></i></li>
           <li><i class="devicon-jquery-plain" title="jQuery"></i></li>
+          <li><i class="devicon-mysql-plain" title="MySQL"></i></li>
+          <li><i class="devicon-postgresql-plain" title="PostgreSQL"></i></li>
         </ul>
         <h2><strong>Daniel J. Contel</strong><span>Full Stack Web Developer</span></h2>
         <ul class="links">
