@@ -9,3 +9,5 @@ RewriteRule ^ https://www.djcontel.com.br%{REQUEST_URI} [L,R=301]
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^([a-z0-9\-\_\/]+)$ index.php?$1 [L,NC]
+
+Redirect /imagens/icontrol.jpg /icontrol.jpg
