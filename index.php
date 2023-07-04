@@ -14,7 +14,7 @@
     <link id="favicon" href="<?= fileVersion("_lib/images/favicon.ico") ?>" rel="icon">
     <link href="https://code.cdn.mozilla.net" rel="preconnect">
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" rel="stylesheet">
     <link href="<?= fileVersion("_lib/css/main.css") ?>" rel="stylesheet">
 <?php
     if (DJC_SANDBOX === false) {
