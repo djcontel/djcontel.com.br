@@ -17,7 +17,7 @@
     <meta property="og:url" content="<?= DJC_URL ?>">
     <meta property="og:description" content="Full Stack Web Developer">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="UDOP">
+    <meta property="og:site_name" content="<?= DJC_TITULO ?>">
     <link href="<?= fileVersion("_lib/images/favicon.ico") ?>" rel="icon">
     <link href="https://code.cdn.mozilla.net" rel="preconnect">
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
