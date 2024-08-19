@@ -30,18 +30,22 @@
             echo '    <script src="https://www.google.com/recaptcha/api.js"></script>' . PHP_EOL;
         }
 
-        // Clicky
-        echo '    <script async data-id="101398008" src="//static.getclicky.com/js"></script>' . PHP_EOL;
-
-        // Google Analytics
-        echo '    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1340128-3"></script>' . PHP_EOL;
-        echo '    <script>' . PHP_EOL;
-        echo '        window.dataLayer = window.dataLayer || [];' . PHP_EOL;
-        echo '        function gtag(){dataLayer.push(arguments);}' . PHP_EOL;
-        echo '        gtag(\'js\', new Date());' . PHP_EOL;
-        echo PHP_EOL;
-        echo '        gtag(\'config\', \'UA-1340128-3\');' . PHP_EOL;
-        echo '    </script>' . PHP_EOL;
+        // Matomo
+?>
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//stats.djcontel.com.br/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+<?php
     }
 ?>
     <script src="<?= fileVersion("_lib/js/main.js", DJC_PATH, DJC_URL) ?>"></script>
@@ -55,7 +59,7 @@
 <?php
     if (empty($_SERVER['QUERY_STRING'])) {
 ?>
-            <input type="text" name="nome" id="nome" placeholder="Nome" required maxlength="120">
+            <input type="text" name="nome" id="nome" placeholder="Nome" autofocus required maxlength="120">
             <input type="text" name="telefone" id="telefone" placeholder="Telefone" required maxlength="15">
             <input type="email" name="email" id="email" placeholder="E-mail" required maxlength="200">
             <textarea name="mensagem" id="mensagem" placeholder="Mensagem" required rows="5"></textarea>
