@@ -11,11 +11,12 @@
     <title><?= DJC_TITULO ?> &mdash; Full Stack Web Developer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Desenvolvimento de sites e sistemas web.">
     <meta property="og:title" content="<?= DJC_TITULO ?>">
     <meta property="og:type" content="website">
     <meta property="og:image" content="<?= fileVersion("_lib/images/link-preview.jpg", DJC_PATH, DJC_URL) ?>">
     <meta property="og:url" content="<?= DJC_URL ?>">
-    <meta property="og:description" content="Full Stack Web Developer">
+    <meta property="og:description" content="Desenvolvimento de sites e sistemas web.">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="<?= DJC_TITULO ?>">
     <link href="<?= fileVersion("_lib/images/favicon.ico") ?>" rel="icon">
@@ -54,12 +55,13 @@
     <main>
       <div class="container">
         <h1><a href="<?= DJC_URL ?>" title="<?= DJC_TITULO ?>"><?= DJC_TITULO ?></a></h1>
+        <h3>Desenvolvimento de <mark>sites e sistemas web</mark></h3>
         <form name="contato" id="contato" method="post" action="<?= DJC_URL ?>enviar">
           <fieldset>
 <?php
     if (empty($_SERVER['QUERY_STRING'])) {
 ?>
-            <input type="text" name="nome" id="nome" placeholder="Nome" autofocus required maxlength="120">
+            <input type="text" name="nome" id="nome" placeholder="Nome" required maxlength="120">
             <input type="text" name="telefone" id="telefone" placeholder="Telefone" required maxlength="15">
             <input type="email" name="email" id="email" placeholder="E-mail" required maxlength="200">
             <textarea name="mensagem" id="mensagem" placeholder="Mensagem" required rows="5"></textarea>

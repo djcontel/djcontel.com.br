@@ -13,8 +13,6 @@ body {
 }
 
 ::selection { background: #1a2e44; color: #f9f9f9; }
-::-moz-selection { background: #1a2e44; color: #f9f9f9; }
-::-webkit-selection { background: #1a2e44; color: #f9f9f9; }
 
 strong { font-weight: 700; }
 
@@ -30,6 +28,7 @@ a:focus { outline: none; }
 
 h1,
 h2,
+h3,
 p { margin: 0; }
 
 h1 {
@@ -46,17 +45,39 @@ h1 a {
     color: #f9f9f9;
 }
 
+h3 {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+h3 mark {
+    position: relative;
+    padding: 4px;
+    border-radius: 2px;
+    background: #45e890;
+    font-weight: bold;
+    color: #1a2e44;
+}
+
+h3 mark:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    background: #22d172;
+}
+
 form {
     border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     padding: 10px;
     width: 302px;
     background-color: #f9f9f9;
     font-size: 0;
     box-shadow: 0 0 5px 2px #ddd;
-    -moz-box-shadow: 0 0 5px 2px #ddd;
-    -webkit-box-shadow: 0 0 5px 2px #ddd;
 }
 
 fieldset {
@@ -69,12 +90,8 @@ input,
 textarea,
 button {
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     padding: 10px;
     border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     border: 0;
     font-family: 'Fira Sans', sans-serif;
     font-size: .85rem;
@@ -131,7 +148,15 @@ button:disabled {
 }
 
 button:hover,
-button:focus { background-color: #45e890; }
+button:focus {
+    background-color: #45e890;
+    box-shadow: 0 0 0 1em transparent;
+    animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #22d172; }
+}
 
 button:focus { outline: 2px solid #22d172; }
 
@@ -140,35 +165,10 @@ button:focus { outline: 2px solid #22d172; }
     width: 302px;
     height: 76px;
     border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     background: url('../images/bg_recaptcha.jpg') center center no-repeat;
 }
 
 #enviar { width: 302px; }
-
-ul.stacks,
-ul.links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.stacks { margin-top: 10px; }
-
-ul.links { margin-bottom: 10px; }
-
-ul.stacks li,
-ul.links li { margin-right: 10px; }
-
-ul.stacks li:last-child,
-ul.links li:last-child { margin-right: 0; }
-
-ul.stacks li i { font-size: 2rem; }
-
-ul.links li i { font-size: 1.5rem; }
 
 h2 {
     display: flex;
@@ -178,6 +178,25 @@ h2 {
     font-weight: normal;
 }
 
+ul.stacks,
+ul.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.stacks { margin-top: 10px; }
+
+ul.links { margin-bottom: 10px; }
+
+ul.stacks li i { font-size: 2rem; }
+
+ul.links li i { font-size: 1.5rem; }
+
 main .container {
     margin: 0 auto;
     width: 322px;
@@ -186,8 +205,6 @@ main .container {
 .msg {
     padding: 10px;
     border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     font-size: .85rem;
 }
 
@@ -238,6 +255,8 @@ main .container {
 @media (min-width: 501px) {
     h1 { margin: 20px 0; }
 
+    h3 { margin: 20px 0; }
+
     form {
         padding: 20px;
         width: 440px;
@@ -262,17 +281,17 @@ main .container {
 
     h2 {
         flex-direction: row;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         margin: 20px 0;
     }
 
-    ul.stacks { margin-top: 20px; }
-
-    ul.stacks li,
-    ul.links li { margin-right: 20px; }
+    ul.stacks,
+    ul.links { gap: 20px; }
 
     h2 span { padding-left: 20px; }
+
+    ul.stacks { margin-top: 20px; }
 
     ul.links { margin-bottom: 20px; }
 
@@ -295,8 +314,6 @@ main .container {
     }
 
     ::selection { background: #45e890; color: #1a2e44; }
-    ::-moz-selection { background: #45e890; color: #1a2e44; }
-    ::-webkit-selection { background: #45e890; color: #1a2e44; }
 
     a { color: #f9f9f9; }
 
@@ -311,8 +328,6 @@ main .container {
     form {
         background-color: #1a2e44;
         box-shadow: 0 0 5px 2px #13283e;
-        -moz-box-shadow: 0 0 5px 2px #13283e;
-        -webkit-box-shadow: 0 0 5px 2px #13283e;
     }
 
     input,
