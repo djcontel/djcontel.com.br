@@ -5,20 +5,20 @@
     // Biblioteca de funções
     require_once "_lib/functions.php";
 ?>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <title><?= DJC_TITULO ?> &mdash; Full Stack Web Developer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Desenvolvimento de sites e sistemas web.">
-    <meta property="og:title" content="<?= DJC_TITULO ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="<?= fileVersion("_lib/images/link-preview.jpg", DJC_PATH, DJC_URL) ?>">
     <meta property="og:url" content="<?= DJC_URL ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= DJC_TITULO ?>">
     <meta property="og:description" content="Desenvolvimento de sites e sistemas web.">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="<?= DJC_TITULO ?>">
+    <meta property="og:image" content="<?= fileVersion("_lib/images/link-preview.jpg", DJC_PATH, DJC_URL) ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <title><?= DJC_TITULO ?> &mdash; Full Stack Web Developer</title>
     <link href="<?= fileVersion("_lib/images/favicon.ico") ?>" rel="icon">
     <link href="https://code.cdn.mozilla.net" rel="preconnect">
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
